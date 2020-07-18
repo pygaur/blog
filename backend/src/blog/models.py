@@ -12,7 +12,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField(null=True)
 
-    slug = models.SlugField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True)
 
     added_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
